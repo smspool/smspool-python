@@ -1,0 +1,10 @@
+generatorName: python
+gitHost: github.com
+gitUserId: smspool
+gitRepoId: smspool-python
+additionalProperties:
+  packageName: smspool_sdk
+  projectName: smspool-sdk
+  packageVersion: 0.1.0
+  packageUrl: https://github.com/smspool/smspool-python
+  licenseInfo: MIT
