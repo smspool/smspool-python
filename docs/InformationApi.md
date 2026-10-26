@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**pool_retrieve_all**](InformationApi.md#pool_retrieve_all) | **POST** /pool/retrieve_all | Pool list
 [**pool_retrieve_valid**](InformationApi.md#pool_retrieve_valid) | **POST** /pool/retrieve_valid | Suggested Pools
 [**request_balance**](InformationApi.md#request_balance) | **POST** /request/balance | Balance
+[**request_history_search**](InformationApi.md#request_history_search) | **POST** /request/history_search | History search
 [**request_success_rate**](InformationApi.md#request_success_rate) | **POST** /request/success_rate | Retrieve country success rates per service
 [**request_suggested_countries**](InformationApi.md#request_suggested_countries) | **POST** /request/suggested_countries | Suggested Countries
 [**service_retrieve_all**](InformationApi.md#service_retrieve_all) | **GET** /service/retrieve_all | Service list
@@ -302,6 +303,89 @@ This endpoint does not need any parameter.
 **400** | Error |  -  |
 **401** | Malformed API key |  -  |
 **403** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **request_history_search**
+> object request_history_search(search, cursor=cursor, limit=limit)
+
+History search
+
+_Not documented yet: the parameters below come straight from the code._
+
+### Example
+
+* Bearer Authentication (bearerAuth):
+
+```python
+import smspool_sdk
+from smspool_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.smspool.net
+# See configuration.py for a list of all supported configuration parameters.
+configuration = smspool_sdk.Configuration(
+    host = "https://api.smspool.net"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: bearerAuth
+configuration = smspool_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with smspool_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = smspool_sdk.InformationApi(api_client)
+    search = 'search_example' # str | 
+    cursor = 'cursor_example' # str |  (optional)
+    limit = 56 # int |  (optional)
+
+    try:
+        # History search
+        api_response = api_instance.request_history_search(search, cursor=cursor, limit=limit)
+        print("The response of InformationApi->request_history_search:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InformationApi->request_history_search: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search** | **str**|  | 
+ **cursor** | **str**|  | [optional] 
+ **limit** | **int**|  | [optional] 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | JSON response |  -  |
+**401** | Malformed API key |  -  |
+**403** | Unknown or revoked API key |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
