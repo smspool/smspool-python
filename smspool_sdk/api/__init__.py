@@ -9,5 +9,4 @@ from smspool_sdk.api.pricing_api import PricingApi
 from smspool_sdk.api.rental_api import RentalApi
 from smspool_sdk.api.sms_api import SMSApi
 from smspool_sdk.api.voucher_api import VoucherApi
-from smspool_sdk.api.esims_api import ESIMsApi
 

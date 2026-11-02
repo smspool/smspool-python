@@ -26,7 +26,6 @@ __all__ = [
     "RentalApi",
     "SMSApi",
     "VoucherApi",
-    "ESIMsApi",
     "ApiResponse",
     "ApiClient",
     "Configuration",
@@ -48,7 +47,6 @@ from smspool_sdk.api.pricing_api import PricingApi as PricingApi
 from smspool_sdk.api.rental_api import RentalApi as RentalApi
 from smspool_sdk.api.sms_api import SMSApi as SMSApi
 from smspool_sdk.api.voucher_api import VoucherApi as VoucherApi
-from smspool_sdk.api.esims_api import ESIMsApi as ESIMsApi
 
 # import ApiClient
 from smspool_sdk.api_response import ApiResponse as ApiResponse

@@ -1,7 +1,6 @@
 .gitignore
 docs/BusinessApi.md
 docs/CarrierApi.md
-docs/ESIMsApi.md
 docs/InformationApi.md
 docs/PreordersApi.md
 docs/PricingApi.md
@@ -16,7 +15,6 @@ smspool_sdk/__init__.py
 smspool_sdk/api/__init__.py
 smspool_sdk/api/business_api.py
 smspool_sdk/api/carrier_api.py
-smspool_sdk/api/esims_api.py
 smspool_sdk/api/information_api.py
 smspool_sdk/api/preorders_api.py
 smspool_sdk/api/pricing_api.py
